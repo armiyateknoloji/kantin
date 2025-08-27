@@ -1,6 +1,6 @@
 // Menu.js - Sadece menü ve ürün işlemleri
 /* global $ */
-
+const baseUrl = window.location.origin;
 class MenuManager {
     
     constructor() {
@@ -15,7 +15,7 @@ class MenuManager {
         console.log('Kategoriler yükleniyor...');
 
         $.ajax({
-            url: '/backend_api/categories.php',
+            url: '/kantin/backend_api/categories.php',
             type: 'GET',
             dataType: 'json',
             timeout: 5000,
@@ -154,7 +154,7 @@ class MenuManager {
         
         // Backend'e kategori ID'si gönder
         $.ajax({
-            url: '/backend_api/products.php',
+            url: '/kantin/backend_api/products.php',
             type: 'GET',
             data: { 
                 category_id: categoryId  
@@ -299,7 +299,6 @@ class MenuManager {
                                     </div>
                                     <div class="plus c-pointer add-to-cart-btn" data-product-id="${product.id}">
                                         <div class="sub-bx">
-                                            <i class="fa fa-plus"></i>
                                         </div>
                                     </div>
                                 </div>
