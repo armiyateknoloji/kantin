@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodDesk - Register</title>
+
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="vendor/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="vh-100">
+    <div class="authincation ">
+        <div class="container">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+                                    <div class="text-center mb-3">
+                                        <a href="index.html"><img src="images/logo-full.png" alt=""></a>
+                                    </div>
+                                    <h4 class="text-center mb-4">Kayıt ol</h4>
+                                    
+                                    <!-- Register Form -->
+                                    <form action="register-handler.php" method="POST">
+
+                                        <!-- First Name -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>İsim</strong></label>
+                                            <input type="text" name="first_name" class="form-control" placeholder="İsim" required>
+                                        </div>
+
+                                        <!-- Last Name -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Soyisim</strong></label>
+                                            <input type="text" name="last_name" class="form-control" placeholder="Soyisim" required>
+                                        </div>
+                                        <!-- Username -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Kullanıcı Adı</strong></label>
+                                            <input type="text" name="username" class="form-control" placeholder="Kullanıcı Adı" required>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Email</strong></label>
+                                            <input type="email" name="email" class="form-control" placeholder="hello@example.com" required>
+                                        </div>
+
+                                        <!-- Password -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Şifre</strong></label>
+                                            <input type="password" name="password" class="form-control" placeholder="********" required>
+                                        </div>
+
+                                        <!-- Phone (optional) -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Telefon numarası</strong></label>
+                                            <input type="text" name="phone" class="form-control" placeholder="+90 5xx xxx xx xx">
+                                        </div>
+
+                                        <div class="text-center mt-4">
+                                            <button type="submit" class="btn btn-primary btn-block">Kaydol</button>
+                                        </div>
+                                    </form>
+
+                                    <!-- Login Link -->
+                                    <div class="new-account mt-3">
+                                        <p>Zaten hesabınız var mı? <a class="text-primary" href="page-login.html">Giriş yap</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="vendor/global/global.min.js"></script>
+    <script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="js/dlabnav-init.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+    <script src="assets/register.js"></script>
+</body>
+</html>

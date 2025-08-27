@@ -1,0 +1,24 @@
+# MIME Types
+AddType application/javascript .js
+AddType text/css .css
+AddType application/json .json
+
+# PHP dosyaları için
+AddType application/x-httpd-php .php
+
+# CORS Headers
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Cache ayarları
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+# Güvenlik
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
