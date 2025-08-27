@@ -15,7 +15,7 @@ class MenuManager {
         console.log('Kategoriler yükleniyor...');
 
         $.ajax({
-            url: '/kantin/backend_api/categories.php',
+            url: '/backend_api/categories.php',
             type: 'GET',
             dataType: 'json',
             timeout: 5000,
@@ -154,7 +154,7 @@ class MenuManager {
         
         // Backend'e kategori ID'si gönder
         $.ajax({
-            url: '/kantin/backend_api/products.php',
+            url: '/backend_api/products.php',
             type: 'GET',
             data: { 
                 category_id: categoryId  
