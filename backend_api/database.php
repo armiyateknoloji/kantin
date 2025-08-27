@@ -1,9 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "kafe"; 
-
+if($_SERVER['REMOTE_ADDR'] == "::1") 
+{
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "kafe"; 
+}
+else {
+  $servername = "localhost";
+  $username = "kantin";
+  $password = "wI7mcShHDPvPNjN";
+  $dbname = "kantin"; 
+}
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
